@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#6750A4"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Create a new Account"
+                android:textColor="#FFFFFF"
+                android:textSize="30dp"
+                android:paddingLeft="10dp"
+                />
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="10dp"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        android:textAlignment="textStart">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="50dp"
+                    android:text="Already have an account ? "
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/register_login"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Login" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Gender"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:entries="@array/gender"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:id="@+id/Register_gender"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="First Name"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/Register_firstname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="This field is empty"
+                android:textSize="10dp"
+                android:textColor="#ff0033"
+                android:visibility="gone"
+                android:id="@+id/register_error1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Last Name"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/Register_lastname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="This field is empty"
+                android:textSize="10dp"
+                android:textColor="#ff0033"
+                android:visibility="gone"
+                android:id="@+id/register_error2"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Email"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/Register_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Invalid Email"
+                android:textSize="10dp"
+                android:textColor="#ff0033"
+                android:visibility="gone"
+                android:id="@+id/register_error10"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Password"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/Register_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Invalid Password"
+                android:textSize="10dp"
+                android:textColor="#ff0033"
+                android:visibility="gone"
+                android:id="@+id/register_error3"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Confirm Password"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/Register_confirmpassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Password doesnt match"
+                android:textSize="10dp"
+                android:textColor="#ff0033"
+                android:visibility="gone"
+                android:id="@+id/register_error4"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Country"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/Register_Country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:entries="@array/countries_array"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Birthday"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/Register_Birthday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="dd/mm/yyyy"
+                android:inputType="date" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Invalid Birthday"
+                android:textSize="10dp"
+                android:textColor="#ff0033"
+                android:visibility="gone"
+                android:id="@+id/register_error5"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Weight (KG) "
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/Register_Weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Invalid Input"
+                android:textSize="10dp"
+                android:textColor="#ff0033"
+                android:visibility="gone"
+                android:id="@+id/register_error6"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Height (CM) "
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/Register_Height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Invalid Input"
+                android:textSize="10dp"
+                android:textColor="#ff0033"
+                android:visibility="gone"
+                android:id="@+id/register_error7"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Carb Grams Per Unit"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/Register_carbperunit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Recommended : 30"
+                android:inputType="text"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Invalid Input"
+                android:textSize="10dp"
+                android:textColor="#ff0033"
+                android:visibility="gone"
+                android:id="@+id/register_error8"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="mgm/ltr Sugar Level Per Unit"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/Register_sugarlevelperunit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Recommended 40"
+                android:inputType="text"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Invalid Input"
+                android:textSize="10dp"
+                android:textColor="#ff0033"
+                android:visibility="gone"
+                android:id="@+id/register_error9"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/register_guest"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="Continue As Guest" />
+
+                <Button
+                    android:id="@+id/Register_Register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Register" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

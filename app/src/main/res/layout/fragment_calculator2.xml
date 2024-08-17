@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Calculator"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/add_food"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="32dp"
+        android:drawableLeft="@drawable/baseline_add_24"
+        android:text="Add Food"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+
+/>
+    <Button
+        android:id="@+id/done_calc"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="32dp"
+        android:text="Done"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/food_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="7dp"
+        android:layout_below="@id/food_view"
+        android:padding="24dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Carbs :"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:layout_marginLeft="16dp"
+         />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Value"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="16dp"
+        />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
