@@ -64,5 +64,5 @@
 
 ## Contact
 
-For any inquiries or issues, please contact [your email] or open an issue in this repository.
+For any inquiries or issues, please contact seifeldin.ibrahim@gmail.com or open an issue in this repository.
 
